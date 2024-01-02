@@ -1,0 +1,34 @@
+Modules
+upper.js
+let totalsale = 0;
+let numbersale = 0;
+export function buy(buyer, item){
+    buyer.total = buyer.total+item.price;
+}
+export function sell(item){
+    totalsale = totalsale+item.price;
+    numbersale = numbersale+1;
+    item.quantity = item.quantity-1;
+    return 0;
+}
+export {totalsale, numbersale};
+-----------------------------------------
+lower.js
+import {totalsale, numbersale, buy, sell} from './uppper.js';
+let buyer =  {
+    name = "Asif",
+    total = 0
+}
+let item = {
+    name = "butter",
+    price = 10;
+    quantity = 100;
+}
+
+buy(buyer, item);
+sell(item);
+
+console.log("Total expense: ", buyer.total);
+console.log("Quantity: ", item.quantity);
+console.log("Total sale: ", totalsale);
+

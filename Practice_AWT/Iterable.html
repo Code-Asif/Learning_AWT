@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iterable</title>
+</head>
+<body>
+    <p id="p1">
+    </p>
+    <script>
+        let arr = ["Asif", "Shabana", "Kamran", "Alam"];
+        let it = arr[Symbol.iterator]();
+        for (a of arr){
+            console.log(it.next());
+        }
+        //console.log(it.next());
+        //console.log(it.next());
+        //console.log(it.next());
+        //console.log(it.next());
+    </script>
+</body>
+
+</html>

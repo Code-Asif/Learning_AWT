@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    let set = new Set(['A','B','C','D']);
+    set.add('E');
+    set.add('A');
+
+    for (let i of set){
+        console.log(i);
+    }
+    console.log(set.has('A'));
+    set.delete('B');
+    console.log(set);
+    let sym = Symbol("Asif");
+    let sym2 = Symbol("Asif");
+    let a = "Asif";
+    let b = "Asif";
+    console.log(sym==sym2);  //false
+    console.log(a==b);      //true
+</script>
+</html>

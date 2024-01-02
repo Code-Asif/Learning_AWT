@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hello Everyone</h1>
+    <p id="p1"></p>
+</body>
+<script>
+    let str1 = prompt("Enter your name", "your name");
+    
+    let str = prompt("Enter your city", "your city");
+    let str2 = `Hello my name is ${str1} and I am from ${str}`;
+    document.getElementById('p1').innerHTML = str2;
+</script>
+</html>

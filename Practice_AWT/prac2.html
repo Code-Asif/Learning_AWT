@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    input[type="text"]{
+        width: 95%;
+        height: 10%;
+        text-align: right;
+    }
+    table{
+        text-align: center;
+        text-decoration: none;
+    }
+</style>
+<body>
+    <h2>Scintific Calculator</h2>
+    <table border="1">
+        <tr>
+            <th colspan="6">
+                <input type="text" id="input" placeholder="0">
+            </th>
+        </tr>
+
+        <!-- First Row -->
+        <tr>
+            <td>
+                <button onclick="backspace()" >CE</button>
+            </td>
+            <td>
+                <button onclick="fact()" >x!</button>
+            </td>
+            <td>
+                <button class="btn" >(</button>
+            </td>
+            <td>
+                <button class="btn" >)</button>
+            </td>
+            <td>
+                <button onclick="input.value=''" >Clear</button>
+            </td>
+            <td>
+                <button class="btn" >%</button>
+            </td>
+        </tr>
+
+        <!-- Second Row -->
+        <tr>
+            <td>
+                <button onclick="sin()" >sin</button>
+            </td>
+            <td>
+                <button onclick="pi()" >&#8508;</button>
+            </td>
+            <td>
+                <button class="btn" >7</button>
+            </td>
+            <td>
+                <button class="btn" >8</button>
+            </td>
+            <td>
+                <button class="btn" >9</button>
+            </td>
+            <td>
+                <button class="btn" >/</button>
+            </td>
+        </tr>
+
+        <!-- Third Row -->
+        <tr>
+            <td>
+                <button onclick="cos()" >cos</button>
+            </td>
+            <td>
+                <button onclick="log()" >log</button>
+            </td>
+            <td>
+                <button class="btn" >4</button>
+            </td>
+            <td>
+                <button class="btn" >5</button>
+            </td>
+            <td>
+                <button class="btn" >6</button>
+            </td>
+            <td>
+                <button class="btn" >*</button>
+            </td>
+        </tr>
+
+        <!-- Fourth Row -->
+        <tr>
+            <td>
+                <button onclick="tan()" >tan</button>
+            </td>
+            <td>
+                <button onclick="sqrt()" >&#8730;</button>
+            </td>
+            <td>
+                <button class="btn" >1</button>
+            </td>
+            <td>
+                <button class="btn" >2</button>
+            </td>
+            <td>
+                <button class="btn" >3</button>
+            </td>
+            <td>
+                <button class="btn" >-</button>
+            </td>
+        </tr>
+
+        <!-- Fifth Row -->
+        <tr>
+            <td>
+                <button onclick="e()" >e</button>
+            </td>
+            <td>
+                <button onclick="pow()" >x<sup>2</sup></button>
+            </td>
+            <td>
+                <button class="btn" >0</button>
+            </td>
+            <td>
+                <button class="btn" >.</button>
+            </td>
+            <td>
+                <button onclick="input.value=eval(input.value);" > = </button>
+            </td>
+            <td>
+                <button class="btn" >+</button>
+            </td>
+        </tr>
+
+        <!-- sixth Row -->
+        <tr>
+            <td>
+                <button onclick="radian()" >Rad</button>
+            </td>
+            <td>
+                <button onclick="degree()" >Deg</button>
+            </td>
+            <td colspan="4">
+                <input type="text" disabled placeholder="Asif Alam B.tech CE 26" style="text-align: center;">
+            </td>
+        </tr>
+    </table>
+</body>
+<script>
+    let input = document.getElementById('input');
+    let btn = document.getElementsByClassName('btn');
+    for(item of btn){
+        item.addEventListener('click',function(e){
+            btnText = e.target.innerHTML;
+            input.value += btnText;
+        });
+    }
+
+    function sin(){
+        input.value = Math.sin(input.value);
+    }
+    function cos(){
+        input.value = Math.cos(input.value);
+    }
+    function tan(){
+        input.value = Math.tan(input.value);
+    }
+    function pow(){
+        input.value = Math.pow(input.value,2);
+    }
+    function log(){
+        input.value = Math.log(input.value);
+    }
+    function sqrt(){
+        input.value = Math.sqrt(input.value);
+    }
+    function pi(){
+        input.value = 3.14159265359;
+    }
+    function e(){
+        input.value = 2.7182812846;
+    }
+    function fact(){
+        var f=1;
+        for (i=1; i<=input.value; i++){
+            f *= i;
+        }
+        input.value = f;
+    }
+    function backspace(){
+        input.value = input.value.substr(0,input.value.length-1);
+    }
+    function radian(){
+        let rad = input.value;
+        input.value = (rad*180)/3.14;
+    }
+    function degree(){
+        let deg = input.value;
+        input.value = (deg*180)/3.14;
+    }
+</script>
+</html>

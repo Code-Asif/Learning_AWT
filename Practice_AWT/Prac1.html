@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practical 1</title>
+</head>
+<body>
+    <table>
+        <h1>Guess the Number</h1>
+        <form action="#">
+            <input type="text" id="txt1">
+            <input type="submit" value="start Guess" id="btn1">
+            <input type="submit" onclick="reset()" value="Reset" id="btn2">
+        </form>
+        <div id="box">
+            <p>Previous Guesses:  <span id="hh1"></span></p>
+            <p>Remaining Count:  <span id="hh2"></span></p>
+            <p id="lowHigh"></p>
+            <p id="random"></p>
+        </div>
+    </table>
+    <script src="jquery.js"></script>
+    <script src="app.js"></script>
+    
+</body>
+</html>
