@@ -1,27 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Practical 1</title>
 </head>
+<style>
+    .table{
+        align-items: center;
+        text-align: center;
+        padding: auto;
+    }
+</style>
 <body>
-    <table>
-        <h1>Guess the Number</h1>
+    <table border="1">
+        <tr>
+            <th colspan="3">
+                <h1>Guess the Number</h1>
+            </th>
+        </tr>
         <form action="#">
-            <input type="text" id="txt1">
-            <input type="submit" value="start Guess" id="btn1">
-            <input type="submit" onclick="reset()" value="Reset" id="btn2">
+            <tr>
+                <td>
+                    <input type="text" id="txt1" placeholder="Enter number">
+                </td>
+                <td>
+                    <input type="submit" value="start Guess" id="btn1">
+                </td>
+                <td>
+                    <input type="submit" onclick="reset()" value="Reset" id="btn2">
+                </td>
+            </tr>
         </form>
-        <div id="box">
-            <p>Previous Guesses:  <span id="hh1"></span></p>
-            <p>Remaining Count:  <span id="hh2"></span></p>
-            <p id="lowHigh"></p>
-            <p id="random"></p>
-        </div>
+        <tr>
+            <div id="box">
+                <td>
+                    <p>Previous Guesses: <span id="hh1"></span></p>
+                </td>
+                <td colspan="2">
+                    <p>Remaining Count: <span id="hh2"></span></p>
+                </td>
+            </div>
+        </tr>
+        <tr>
+            <td colspan="3">
+                <p id="lowHigh"></p>
+                <p id="random"></p>
+            </td>
+        </tr>
     </table>
     <script src="jquery.js"></script>
     <script src="app.js"></script>
-    
+
 </body>
 </html>

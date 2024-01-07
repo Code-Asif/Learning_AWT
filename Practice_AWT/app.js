@@ -1,4 +1,3 @@
-//Random Number 1 to 100
 var randomNumber=parseInt((Math.random()*100)+1);
 var userInput=document.getElementById('txt1');
 var submitBtn=document.getElementById('btn1');

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="p1"></p>
+</body>
+<script>
+    
+    let a = Math.floor((Math.random()*100)+1);
+    let count=0;
+    let user = prompt("Guess the number: ");
+    while(user != a){
+        if(user < a ){
+            window.alert("Too low");
+            count++;
+            user = prompt("Guess the number: ");
+        }
+        else if(user > a){
+            window.alert("Too high");
+            count++;
+            user = prompt("Guess the number: ");
+        }
+    }
+    
+    document.getElementById('p1').innerHTML = `Congratulations your guess is correct in ${count}`;
+</script>
+</html>
